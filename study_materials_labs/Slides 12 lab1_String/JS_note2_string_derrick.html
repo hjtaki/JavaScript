@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>String Review</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// String - a sequence of characters.
+		var myStr = "Hello";
+		// '+' operator to concatenate(combine) strings. 
+		document.write("<h1>" + myStr + "</h1>");
+
+		// returns the indexOf a substring.
+		var index_of_e = myStr.indexOf("e"); 
+		document.write("<h1>Index Of 'e' in 'Hello' is " + index_of_e + "</h1>")
+
+		// .substring(start[, end])
+		var myStr2 = "Cornerstone";
+		var substr2 = myStr2.substring(6, 11); // myStr2[6:11]
+		document.write("<h1>'Cornerstone'.substring(6, 11) => " + substr2 + "</h1>");
+
+		// .slice(start[, end]) - the same as .substring(), except slice can use negative indices.
+		var myStr2 = "Cornerstone";
+		var substr2 = myStr2.slice(-5, -1);
+		document.write("<h1>'Cornerstone'.slice(-5, -1) => " + substr2 + "</h1>");
+
+		// str.replace(old, new) - replaces 'old' with 'new'
+		var myStr3 = "Vancouver is rainy";
+		var repStr3 = myStr3.replace("rainy", "always rainy");
+		document.write("<h1>" + repStr3 + "</h1>");
+
+		// str.concat(str2, str3) => str + str2 + str3
+		var d = document;
+		var a = "Vancouver ".concat("is", " rainy.");
+		d.write("<h1>concat == + :" + a + "</h1>");
+
+		// str.charAt(index) :returns a char at the index from str
+		var city = "Vancouver";
+		d.write("<h1>" + city.charAt(0) + "</h1>"); // city.substring(0, 1);
+
+
+		// str.split(sep) -> splits the 'str' around 'sep' into a list(array)
+		var someStr = "It's almost Feburary.";
+		var splittedArr = someStr.split(" ");
+		d.write("<h1>" + splittedArr[0] + "</h1>");
+		d.write("<h1>" + splittedArr[1] + "</h1>");
+		d.write("<h1>" + splittedArr[2] + "</h1>");
+
+		// arr.join(str) -> joins all elements with 'str' in an 'arr' to a string
+		var joinedStr = ["Hello", "World"].join("*");
+		d.write("<h1>" + joinedStr + "</h1>");
+
+
+		var s = "1Javascript is fun. Yesterday I was excited to study programming.";
+		var a = s.split(" "); // a = ["Javascript", "is", "fun"]
+		var j = a.join("\t"); // \n, \t, \\, \", \'
+		console.log(a);
+		console.log(j);
+
+		// 'is', 'are', 'was', "were" <= 'really'
+		var words = s.split(" "); // ["Javascript", ..., "programming"]
+		var result = "";
+		var adj = prompt("Your mood? ");
+
+		for(var i = 0; i < words.length; i++) {
+			if (words[i] == "is" || words[i] == "was" || words[i] == "are" || words[i] == "were") {
+				result += " " + words[i] + " " + adj;
+			} else {
+				result += " " + words[i];
+			}
+		}
+		alert(result);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Easings</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	
+	<style type="text/css">
+		img {
+			position: absolute;
+			left: 300px;
+			top: 100px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<img id="bb" src="basket.jpg" alt="basketball">
+	
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		var basket = $("#bb");
+		var scaleFactor = 0;
+		var degree = 0; 
+
+		$({	s: 0, r: 0 }).animate(
+			{ 
+				s: 2,
+				r: 360
+			}, 
+			{
+				//'scale(' + scaleFactor + ")
+				//"rotateX(" + degree + "deg)
+				// now: value being changed (s)
+				// fx.prop : property being animated. (s)
+				duration: 3000,
+				step: function(now, fx) {
+						if (fx.prop == "r") {
+							degree = now;
+						} else if (fx.prop == "s") {
+							scaleFactor = now;
+						}
+						basket.css('transform', "rotateY(" + degree + "deg)");
+					}
+			});
+					
+	</script>
+
+
+</body>
+</html>

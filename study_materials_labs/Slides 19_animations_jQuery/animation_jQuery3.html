@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation3</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		img {
+			width: 100px;
+			height: 100px;
+		}
+		#img1 {
+			top: 100px;
+			position: absolute; 
+		}
+		#img2 {
+			position: absolute;
+			top: 300px;
+		}
+
+	</style>
+</head>
+<body>
+	<p id="top_text">Here's some text.</p>
+	<button class="btn btn-primary">START</button>
+	<img id="img1" src="soccer.jpg" alt="ball" />
+	<img id="img2" src="basketball.jpg" alt="basketball" />
+
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function() {
+
+
+			
+			$("button").click(function() {
+				$("#img1").animate({
+					left: '500px'				
+				}, 3000, 'swing',function() { });
+
+				// $("#img2").animate({ left: '500px' }, 3000, 'linear');
+				$("#img2").animate({ left: '500px'}, {
+					duration: 3000,
+					progress: function(ani, prog, remMs) {
+						$("#top_text").text((prog * 100).toFixed(0) + "% finished.");
+					}
+				});
+
+				$("#top_text").animate({ fontSize: '50px' }, 3000);	
+						
+			});
+				});
+
+	
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

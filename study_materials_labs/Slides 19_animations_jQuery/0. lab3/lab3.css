@@ -1,0 +1,109 @@
+	
+
+	.yellow{
+		background-color: yellow;
+		}
+
+
+	}
+	#myAnimation{
+		position: absolute;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		}
+
+
+	#MyContainer1{
+		position: relative;
+		width: 300px;
+		height:300px;
+		border: solid 2px;
+		
+
+
+	}
+	#myAnimation_tl{
+		position: absolute;
+		top: 0px;
+		left:0px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+
+
+	#myAnimation_tm{
+		position: absolute;
+		left: 100px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+	#myAnimation_tr{
+		position: absolute;
+		left: 200px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+
+	#myAnimation_ml{
+		position: absolute;
+		top: 100px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+	#myAnimation_mm{
+		position: absolute;
+		left: 100px;
+		top: 100px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+	#myAnimation_mr{
+		position: absolute;
+		left: 200px;
+		top: 100px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+
+	#myAnimation_bl{
+		position: absolute;
+		top: 200px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+	#myAnimation_bm{
+		position: absolute;
+		left: 100px;
+		top: 200px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		border: solid 1px;}
+
+	#myAnimation_br{
+		position: absolute;
+		left: 200px;
+		top: 200px;
+		text-align : center;
+		font-size: 100px;
+		width: 100px;
+		height: 100px;
+		background-color: lightblue;
+		border: solid 1.1px;}

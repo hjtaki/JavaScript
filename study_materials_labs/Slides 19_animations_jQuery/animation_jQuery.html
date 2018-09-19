@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		#box {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<p>Text above animation</p>
+	<input type="button" class="btn" value="Animate">
+	<div id="animate">
+		<p>Text to animate.</p>
+		<div id="box"></div>
+	</div>
+	<p>Text below animation</p>
+
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('input').click(function(){
+				// 1000 ms -> 1 sec
+				// $('#animate').toggle(3000);
+
+				// $('#animate').toggle(
+				// 	{
+				// 		duration: 1000,
+				// 		easing: 'linear'
+				// 	}
+				// );
+				// $('#animate').fadeTo('slow', 0.1, function(){
+				// 	// completion function
+				// });
+				var a = $("#animate");
+				// if (a.is(':hidden')) {
+				// 	a.slideDown(3000);
+				// } else {
+				// 	a.slideUp(3000);
+				// }
+				a.slideToggle(2000);
+
+
+			});
+		});
+
+	
+
+
+	</script>
+
+
+</body>
+</html>

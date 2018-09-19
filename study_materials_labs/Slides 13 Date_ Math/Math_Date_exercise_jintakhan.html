@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		
+
+
+	</script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// <!-- JavaScript Math Exercises
+
+
+	// 1. Write a JavaScript function to generate a random integer between any 10 and 35.
+var a = Math.random()
+var b = a *25 +10
+console.log(b)
+
+	// 2. Write a JavaScript function to find the highest value in an array.
+	// Test Data :
+function max(a){
+	var M = Math.max.apply(null,a);
+	return M
+
+}
+
+
+console.log(max([12,34,56,1]));
+console.log(max([-12,-34,0,-56,-1]));
+	// 56 
+	// 0
+
+	// 3. Write a JavaScript function which will return values that are powers of two.
+	// Test Data : 
+function isPower_of_two(a) {
+	return Math.pow(a,2);
+}
+
+console.log(isPower_of_two(64));
+	// true 4096
+console.log(isPower_of_two(94));
+	// false 8836
+
+	// 4. Write a JavaScript function to convert degrees to radians.
+	// Test Data : 
+function degrees_to_radians(a) {
+	return a * Math.PI /180;
+}	
+console.log(degrees_to_radians(45));
+	// 0.7853981633974483
+
+	// 5. Write a JavaScript function to calculate the percentage (%) of a number.
+	// Test Data : 
+function percentage(a,b) {
+	return b / a * 10000
+}
+console.log(percentage(1000, 47.12));
+	// 471.2
+
+	// 6. Write a JavaScript function to convert a positive number to negative number.
+	// Test Data : 
+function pos_to_neg(a) {
+	return a * -1
+}
+
+console.log(pos_to_neg(15));
+	// -15 
+
+	//NOK 7. Write a JavaScript function to calculate the sum of values in an array.
+	// Test Data :
+
+function sum(arr){
+	var sum =0
+
+	for (var i=0; i<arr.length; i++){
+		sum +=arr[i]
+	}
+	return sum
+}
+
+
+console.log(sum([1,2,3])); 
+console.log(sum([100,-200,3])); 
+console.log(sum([1,2,'a',3]));
+	// Output :
+	// 6 
+	// -97
+	// 6
+
+console.log("--------------------------------")
+
+	// JavaScript Exercises - Date Object
+
+
+	// NOK 1. Write a JavaScript function to check whether an 'input' is a date object or not.
+
+	// Test Data :
+function is_date(a) {
+  if ( Object.prototype.toString.call(a) === "[object Date]" ) 
+    return true;
+  return false;   
+    };
+
+
+
+
+console.log(is_date("October 13, 2014 11:13:00")); 
+console.log(is_date(new Date(86400000))); 
+console.log(is_date(new Date(99,5,24,11,33,30,0))); 
+console.log(is_date([1, 2, 4, 0]));
+	// Output :
+	// false 
+	// true 
+	// true 
+	// false
+
+	// 2. Write a JavaScript function to get the current date.
+
+	// Note : Pass a separator as an argument.
+	// Test Data :
+function curday(a) {
+	var n = new Date();
+	var m = n.getMonth();
+	var d = n.getDate();
+	var y = n.getFullYear();
+	return m+1 +a+ d +a+ y
+}
+var n = new Date();
+var m = n.getMonth();
+console.log(n)
+console.log(m)
+console.log(curday('/')); 
+console.log(curday('-'));
+	// Output :
+	// "11/13/2014" 
+	// "11-13-2014"
+
+	// 3. Write a JavaScript function to get the number of days in a month.
+
+	// Test Data :
+
+function getDaysInMonth(month,year) {
+	var d = new Date(year,month,0);
+	console.log(d)
+	return d.getDate();
+}
+
+
+console.log(getDaysInMonth(1, 2012)); 
+console.log(getDaysInMonth(2, 2012)); 
+console.log(getDaysInMonth(9, 2012)); 
+console.log(getDaysInMonth(12, 2012)); 
+	// Output :
+	// 31 
+	// 29 
+	// 30 
+	// 31
+
+	// 4. Write a JavaScript function to get the month name from a particular date.
+
+
+function month_name(a) {
+	var month_num = new Date(a).getMonth()
+	console.log(month_num)
+	var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"];
+		return monthNames[month_num];
+}
+
+
+console.log(month_name(new Date("10/11/2009"))); 
+console.log(month_name(new Date("11/13/2014")));
+	// Output :
+	// "October" 
+	// "November"
+
+	// 5. Write a JavaScript function to compare dates (i.e. greater than, less than or equal to).
+
+
+function compare_dates(a,b) {
+	if (a>b){
+		return "Date1 > Date2";
+	}
+	else if (a<b){
+		return "Date2 > Date1";
+	}
+	else {
+		return "Date1 = Date2" ;
+	}
+}
+
+
+	// Test Data :
+console.log(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:00'))); 
+console.log(compare_dates(new Date('11/14/2013 00:01'), new Date('11/14/2013 00:00'))); 
+console.log(compare_dates(new Date('11/14/2013 00:00'), new Date('11/14/2013 00:01')));
+	// Output :
+	// "Date1 = Date2" 
+	// "Date1 > Date2" 
+	// "Date2 > Date1"
+
+	// 6. Write a JavaScript function to add specified minutes to a Date object.
+function add_minutes(a,b) {
+	var mili = a.getTime();
+	console.log(mili)
+	var result = mili+(b*60000);
+	return new Date(result);
+
+}
+
+
+	// Test Data :
+console.log(add_minutes(new Date(2014,10,2), 30).toString());
+	// Output :
+	// "Sun Nov 02 2014 00:30:00 GMT+0530 (India Standard Time)"
+
+	// 7. Write a JavaScript function to get difference between two dates in days.
+function date_diff_indays(a,b) {
+	var date1 = new Date(a);
+	var date2 = new Date(b);
+	var date1_mili = date1.getTime();
+	var date2_mili = date2.getTime();
+	var diff = date2_mili - date1_mili;
+	var result= diff/(1000*60*60*24);
+	return Math.round(result);
+
+
+
+}
+
+	// Test Data :
+console.log(date_diff_indays('04/02/2014', '11/04/2014')); 
+console.log(date_diff_indays('12/02/2014', '11/04/2014'));
+	// Output :
+	// 216 
+	// -28
+
+	// 8. Write a JavaScript function to get the last day of a month.
+function lastday(year,month) {
+	var d = new Date(year,month+1,0);
+	console.log(d,"--")
+	var NumOfDay= d.getDate();
+	return NumOfDay;
+}
+
+
+	// Test Data :
+console.log(lastday(2014,0)); 
+console.log(lastday(2014,1)); 
+console.log(lastday(2014,11));
+	// Output :
+	// 31 
+	// 28 
+	// 31
+
+	// 9. Write a JavaScript function that will return the number of minutes in hours and minutes.
+function timeConvert(minute) {
+	var date = new Date(0,0,0,0,minute,0,0);
+	var hour = date.getHours();
+	var min = date.getMinutes();
+	return minute + " minutes = "+hour+" hour(s) and "+min +" minute(s)" 
+
+}
+
+
+	// Test Data :
+console.log(timeConvert(200));
+	// Output :
+	// "200 minutes = 3 hour(s) and 20 minute(s)."
+
+	// 10. Write a JavaScript program to calculate age.
+
+	// Test Data :
+	// console.log(calculate_age(new Date(1982, 11, 4))); 
+	// 35
+	// console.log(calculate_age(new Date(1962, 1, 1)));
+	// 55
+
+	//  -->
+ </script>
+</body>
+</html>

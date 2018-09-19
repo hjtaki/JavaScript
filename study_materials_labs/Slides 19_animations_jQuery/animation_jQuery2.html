@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation2</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style type="text/css">
+		img {
+			position: absolute; 
+		}
+
+	</style>
+</head>
+<body>
+
+	<p>Here's some text.</p>
+	<button class="btn btn-primary">START</button>
+	<img src="soccer.jpg" alt="ball" />
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('button').click(function(){
+				$('img').animate({ 
+					left: '300px', 
+					top: '300px',
+					opacity: 0
+				}, 1000);
+
+				$('p').animate({
+					fontSize: '100px'
+				}, 2000);
+			});
+		});
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

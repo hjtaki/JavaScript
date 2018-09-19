@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Events</title>
+</head>
+<body>
+
+	<!-- <h1 id="header" onclick="suprise();">Welcome to JS EVENTS!</h1> -->
+	<h1>Press Enter or Space to write on the page!</h1>
+	<h1 id="header"></h1>
+	<input id="textbox" type="text" onkeypress="writeIt(event);">	
+
+	<script type="text/javascript">
+
+		function writeIt(key){
+			if (key.keyCode === 13) {
+				// key.preventDefault();
+				document.getElementById('header').innerHTML = document.getElementById("textbox").value;	
+			}
+		}
+
+		function suprise() {
+			var content = document.getElementById('header').innerHTML;
+			if (content === "Welcome to JS EVENTS!") {
+				document.getElementById('header').innerHTML = "WOW!";
+			} else {
+				document.getElementById('header').innerHTML = "Welcome to JS EVENTS!";
+			}
+		}
+	</script>
+</body>
+</html>
